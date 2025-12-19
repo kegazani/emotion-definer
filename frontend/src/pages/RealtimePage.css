@@ -1,0 +1,211 @@
+.realtime-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.realtime-header-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.last-update {
+  font-size: 14px;
+  opacity: 0.7;
+  font-weight: 500;
+}
+
+.prediction-card {
+  background: linear-gradient(135deg, rgba(100, 108, 255, 0.1), rgba(175, 82, 222, 0.1));
+  border: 2px solid rgba(100, 108, 255, 0.3);
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  opacity: 0.9;
+}
+
+.prediction-main {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.prediction-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.prediction-confidence {
+  font-size: 18px;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.prediction-probabilities {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.prob-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+.prob-emotion {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.prob-value {
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.metric-card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  transition: transform 0.2s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-2px);
+}
+
+.metric-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.metric-icon {
+  font-size: 24px;
+}
+
+.metric-label {
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.metric-value-large {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.metric-unit {
+  font-size: 12px;
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.metric-card.heart .metric-value-large {
+  color: #FF2D55;
+}
+
+.metric-card.hrv .metric-value-large {
+  color: #AF52DE;
+}
+
+.metric-card.oxygen .metric-value-large {
+  color: #34C759;
+}
+
+.metric-card.stress .metric-value-large {
+  color: #FF9500;
+}
+
+.metric-card.battery .metric-value-large {
+  color: #FFCC00;
+}
+
+.metric-card.respiratory .metric-value-large {
+  color: #5AC8FA;
+}
+
+.metric-card.temp .metric-value-large {
+  color: #FF3B30;
+}
+
+.metric-card.steps .metric-value-large {
+  color: #007AFF;
+}
+
+.chart-card {
+  margin-top: 8px;
+}
+
+.empty-state-card {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.empty-icon {
+  font-size: 64px;
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.empty-state-card h3 {
+  font-size: 24px;
+  margin-bottom: 12px;
+  opacity: 0.9;
+}
+
+.empty-state-card p {
+  font-size: 16px;
+  opacity: 0.7;
+  margin-bottom: 8px;
+}
+
+.empty-state-card .hint {
+  font-size: 14px;
+  opacity: 0.5;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .metric-value-large {
+    font-size: 28px;
+  }
+
+  .prediction-main {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
